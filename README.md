@@ -1,2 +1,3 @@
-# kotlin
-example
+# Kotlin Project
+
+Kotlin exercise
