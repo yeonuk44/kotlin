@@ -1,3 +1,7 @@
+import kotlin.reflect.typeOf
+
+
+
 fun main(args: Array<String>) {
     /**
      * Iteration Example
@@ -7,6 +11,7 @@ fun main(args: Array<String>) {
     // IntRange, LongRange, CharRange
     val numRange : IntRange = 1..5
 
+    println()
     println(numRange.contains(3))
     println(numRange.contains(10))
 
