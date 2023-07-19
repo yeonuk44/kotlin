@@ -30,5 +30,17 @@ fun main(args: Array<String>) {
     for(i in 1 .. 10 step 2){
         println(i)
     }
+
     // 2. While
+
+    var num = 1
+    while (num < 5){
+        println("current number $num")
+        num++
+    }
+
+    do {
+        println("current number $num")
+        num++
+    }while (num < 6)
 }
