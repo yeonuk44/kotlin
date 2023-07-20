@@ -23,24 +23,53 @@ fun main(args: Array<String>) {
 //        fruit -> println("fruit list: ${fruit}")
 //    }
 
-    // Set
-    // 중복된 요쇼를 거른 순서가 없는 자료형이다.
+//    // Set
+//    // 중복된 요쇼를 거른 순서가 없는 자료형이다.
+//
+//    // Immutable Set
+//    val immutableNumSet = setOf(1,2,2,3,1,4)
+//    println(immutableNumSet)
+//    // result: [1, 2, 3, 4]
+//
+//    // Mutable Set
+//    val mutableNumSet = mutableSetOf(1,2,3,4,4,4,4,5,6,5)
+//    mutableNumSet.add(100)
+//    println(mutableNumSet)
+//    // result: [1, 2, 3, 4, 5, 6, 100]
+//
+//    mutableNumSet.remove(2)
+//    println(mutableNumSet)
+//    // result: [1, 3, 4, 5, 6, 100]
+//
+//    println(mutableNumSet.contains(2))
+//    // result: false
 
-    // Immutable Set
-    val immutableNumSet = setOf(1,2,2,3,1,4)
-    println(immutableNumSet)
-    // result: [1, 2, 3, 4]
+    // Map
+    // immutable의 경우는 불변하는 값에 맞춰 아무것도 값을 변경할 수가 없다.
+    // JS에서는 객체 내부의 속성에 대한 값은 const로 선언해도 변경이 가능했으나 kotlin에서는 불가능하다.
+    val immutableMap = mapOf("name" to "asd", "age" to 123, "height" to 176)
+    println(immutableMap)
 
-    // Mutable Set
-    val mutableNumSet = mutableSetOf(1,2,3,4,4,4,4,5,6,5)
-    mutableNumSet.add(100)
-    println(mutableNumSet)
-    // result: [1, 2, 3, 4, 5, 6, 100]
+    val mutableMap = mutableMapOf("name" to "asd", "age" to 123, "height" to 176)
+    println(mutableMap["age"])
+    // result: 123
 
-    mutableNumSet.remove(2)
-    println(mutableNumSet)
-    // result: [1, 3, 4, 5, 6, 100]
+    mutableMap["age"] = 10
+    println(mutableMap["age"])
+    // result: 10
 
-    println(mutableNumSet.contains(2))
-    // result: false
+    mutableMap.put("hobby", "coding")
+    println(mutableMap)
+    // result: {name=asd, age=10, height=176, hobby=coding}
+
+    mutableMap.remove("name")
+    println(mutableMap)
+    // result: {age=10, height=176, hobby=coding}
+
+    mutableMap.replace("age", 80)
+    println(mutableMap)
+    // result: {age=80, height=176, hobby=coding}
+
 }
+
+
